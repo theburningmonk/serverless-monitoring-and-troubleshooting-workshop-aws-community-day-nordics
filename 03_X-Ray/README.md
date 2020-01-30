@@ -126,7 +126,7 @@ Fortunately, you can instrument the built-in `https` module with the X-Ray SDK.
 
 1. Modify `functions/get-index.js` and just before ln5
 
-`const http = require('superagent-promise')(require('superagent'), Promise)`
+`const http = require('axios')`
 
 insert the following
 
@@ -144,7 +144,7 @@ const fs = require("fs")
 const Mustache = require('mustache')
 const AWSXRay = require('aws-xray-sdk-core')
 AWSXRay.captureHTTPsGlobal(require('https'))
-const http = require('superagent-promise')(require('superagent'), Promise)
+const http = require('axios')
 
 // the rest of the file...
 ```
