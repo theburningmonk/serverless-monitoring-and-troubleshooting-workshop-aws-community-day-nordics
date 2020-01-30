@@ -99,7 +99,7 @@ const AWS = AWSXRay.captureAWS(require('aws-sdk'))
 
 4. Deploy the project
 
-`npm run sls -- deploy -s dev -r eu-west-1`
+`npm run sls -- deploy`
 
 5. Load up the landing page, and place an order. Then head to the X-Ray console and see what you get now.
 
@@ -151,7 +151,7 @@ const http = require('axios')
 
 2. Deploy the project
 
-`npm run sls -- deploy -s dev -r eu-west-1`
+`npm run sls -- deploy`
 
 3. Load up the landing page, and place an order. Then head to the X-Ray console and now you can see the traces for `get-index` and `get-restaurants` function in one place.
 
