@@ -56,7 +56,7 @@ provider:
   region: eu-west-1
   environment:
     LOG_LEVEL: ${self:custom.logLevel.${self:custom.stage}, self:custom.logLevel.default}
-    SAMPLE_DEBUG_LOG_RATE: 0.2
+    SAMPLE_DEBUG_LOG_RATE: 0.1
 ```
 
 4. Deploy the demo app to a new `prod` stage, where we have configured the minimum log level to be `INFO` so by default, only `Info` logs should be recorded. But we should also expect the debug messages for 20% of invocation would be sampled.
